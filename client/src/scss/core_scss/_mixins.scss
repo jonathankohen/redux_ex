@@ -1,1 +1,54 @@
 // TODO: add mixins
+
+// basic example
+// @mixin reset-list {
+//   margin: 0;
+//   padding: 0;
+//   list-style: none;
+// }
+
+// @mixin horizontal-list {
+//   @include reset-list;
+
+//   li {
+//     display: inline-block;
+//     margin: {
+//       left: -2px;
+//       right: 2em;
+//     }
+//   }
+// }
+
+// nav ul {
+//   @include horizontal-list;
+// }
+
+// same as:
+// nav ul {
+//   margin: 0;
+//   padding: 0;
+//   list-style: none;
+// }
+// nav ul li {
+//   display: inline-block;
+//   margin-left: -2px;
+//   margin-right: 2em;
+// }
+
+// media queries programmatically?!
+// @mixin media($types...) {
+//   @each $type in $types {
+//     @media #{$type} {
+//       @content($type);
+//     }
+//   }
+// }
+
+// @include media(screen, print) using ($type) {
+//   h1 {
+//     font-size: 40px;
+//     @if $type == print {
+//       font-family: Calluna;
+//     }
+//   }
+// }
