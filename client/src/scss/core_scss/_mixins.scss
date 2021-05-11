@@ -1,5 +1,19 @@
 // TODO: add mixins
 
+@media (max-width: 576px) {
+    .auth_div {
+        margin-bottom: 50px;
+    }
+
+    h3.counter {
+        padding: 0;
+    }
+
+    .profile {
+        margin-bottom: 50px;
+    }
+}
+
 // basic example
 // @mixin reset-list {
 //   margin: 0;

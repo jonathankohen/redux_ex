@@ -24,25 +24,35 @@ export default function Counter() {
     };
 
     return (
-        <main className="counter">
+        <div className="container counter">
             <h1>Redux Counter</h1>
-            {show ? <h3 className="counter">{counter}</h3> : ''}
+
+            {show ? (
+                <div className="row d-flex justify-content-center my-4">
+                    <div className="col-3">
+                        <h3 className="counter">{counter}</h3>
+                    </div>
+                </div>
+            ) : (
+                ''
+            )}
+
             <button
                 type="button"
-                className="btn-lg btn-primary"
+                className="btn btn-primary"
                 onClick={incrementHandler}
             >
                 Increment
             </button>
-            <button className="btn-lg btn-primary" onClick={addFive}>
+            <button className="btn btn-primary" onClick={addFive}>
                 Increase by 10
             </button>
-            <button className="btn-lg btn-primary" onClick={decrementHandler}>
+            <button className="btn btn-primary" onClick={decrementHandler}>
                 Decrement
             </button>
-            <button className="btn-lg btn-primary" onClick={toggleHandler}>
+            <button className="btn btn-primary" onClick={toggleHandler}>
                 Toggle Counter
             </button>
-        </main>
+        </div>
     );
 }

@@ -10,37 +10,60 @@ const Header = () => {
     };
 
     return (
-        <header className="header">
-            {/* <h1>Redux Auth</h1>
-            {isAuth && (
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="/">My Products</a>
-                        </li>
-                        <li>
-                            <a href="/">My Sales</a>
-                        </li>
-                        <li>
-                            <button onClick={logoutHandler}>Logout</button>
-                        </li>
-                    </ul>
-                </nav>
-            )} */}
-            <nav class="navbar navbar-light bg-light">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark">
                 <div class="container-fluid">
-                    <a class="navbar-brand">Navbar</a>
-                    <form class="d-flex">
-                        <input
-                            class="form-control me-2"
-                            type="search"
-                            placeholder="Search"
-                            aria-label="Search"
-                        />
-                        <button class="btn btn-outline-success" type="submit">
-                            Search
-                        </button>
-                    </form>
+                    {/* eslint-disable-next-line */}
+                    <a class="navbar-brand" href="#">
+                        Redux Auth
+                    </a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div
+                        class="collapse navbar-collapse"
+                        id="navbarSupportedContent"
+                    >
+                        {isAuth && (
+                            <>
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        {/* eslint-disable-next-line */}
+                                        <a
+                                            class="nav-link active"
+                                            aria-current="page"
+                                            href="#"
+                                        >
+                                            My Products
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        {/* eslint-disable-next-line */}
+                                        <a class="nav-link" href="#">
+                                            My Sales
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                {/* eslint-disable-next-line */}
+                                <a
+                                    className="logout btn btn-outline-warning"
+                                    href="#"
+                                    onClick={logoutHandler}
+                                >
+                                    Logout
+                                </a>
+                            </>
+                        )}
+                    </div>
                 </div>
             </nav>
         </header>

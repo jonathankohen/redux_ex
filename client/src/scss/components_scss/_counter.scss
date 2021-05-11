@@ -1,7 +1,4 @@
-// TODO: double-check if all the CSS is necessary
-
 .counter {
-    margin: 5rem auto;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     padding: 1rem;
@@ -11,14 +8,11 @@
     h1 {
         text-transform: uppercase;
         color: #575757;
-        margin: 0;
-        font-size: 1rem;
+        font-size: 2rem;
     }
 }
 
 .value {
-    font-size: 2rem;
     color: #3c0080;
-    margin: 2rem 0;
     font-weight: bold;
 }

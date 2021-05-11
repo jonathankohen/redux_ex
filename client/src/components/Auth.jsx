@@ -10,21 +10,35 @@ const Auth = () => {
     };
 
     return (
-        <main className="auth">
-            <section>
-                <form onSubmit={loginHandler}>
-                    <div className="control">
-                        <label htmlFor="email">Email</label>
-                        <input type="email" id="email" />
-                    </div>
-                    <div className="control">
-                        <label htmlFor="password">Password</label>
-                        <input type="password" id="password" />
-                    </div>
-                    <button className="btn-lg btn-primary">Login</button>
-                </form>
-            </section>
-        </main>
+        <div className="container auth">
+            <form onSubmit={loginHandler}>
+                <div className="mb-3">
+                    <label for="exampleInputEmail1" className="form-label">
+                        Email address
+                    </label>
+                    <input
+                        type="email"
+                        className="form-control"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                    />
+                </div>
+                <div>
+                    <label for="exampleInputPassword1" className="form-label">
+                        Password
+                    </label>
+                    <input
+                        type="password"
+                        className="form-control"
+                        id="exampleInputPassword1"
+                    />
+                </div>
+
+                <button type="submit" className="btn btn-primary">
+                    Submit
+                </button>
+            </form>
+        </div>
     );
 };
 
