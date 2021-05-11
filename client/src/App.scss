@@ -1,0 +1,25 @@
+$primary_color: #3c0080;
+
+$theme-colors: (
+    'primary': $primary_color,
+);
+
+#root {
+    height: 100vh;
+    background-color: #333;
+
+    .btn-primary {
+        background-color: $primary_color;
+        border: $primary_color;
+        padding: 10px 20px;
+        margin: 20px;
+        &:hover,
+        :active,
+        :focus {
+            background-color: lighten($primary_color, 10%);
+            border: lighten($primary_color, 10%);
+        }
+    }
+}
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
