@@ -1,9 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { counterActions } from '../store/index';
-// import { authActions } from '../store/index';
-
-import classes from './Counter.module.css';
+import { counterActions } from '../redux/slices/counter_slice';
 
 export default function Counter() {
     const dispatch = useDispatch();
@@ -27,9 +24,9 @@ export default function Counter() {
     };
 
     return (
-        <main className={classes.counter}>
+        <main className="counter">
             <h1>Redux Counter</h1>
-            {show ? <h3 className={classes.value}>{counter}</h3> : ''}
+            {show ? <h3 className="counter">{counter}</h3> : ''}
             <button
                 type="button"
                 className="btn-lg btn-primary"

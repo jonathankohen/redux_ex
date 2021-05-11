@@ -1,0 +1,7 @@
+$primary_color: #3c0080;
+
+$theme-colors: (
+    'primary': $primary_color,
+);
+
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';

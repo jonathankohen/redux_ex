@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.scss';
+import './scss/index.scss';
 
 import Header from './components/Header';
 import Auth from './components/Auth';
@@ -13,11 +13,15 @@ function App() {
 
     return (
         <div className="App">
+            {/* FIXME: make responsive */}
             <div className="container">
                 <Header />
-                {!isAuth && <Auth />}
-                {isAuth && <UserProfile />}
-                <Counter />
+                {!isAuth ? <Auth /> : <UserProfile />}
+                <div className="row d-flex justify-content-center">
+                    <div className="col-6">
+                        <Counter />
+                    </div>
+                </div>
             </div>
         </div>
     );
